@@ -24,8 +24,6 @@ btniniciar.addEventListener('click',function(){
                 minuto = "00"
             }
 
-            console.log(pegaseg.value)
-
             if(pegaseg.value >= 1 && pegaseg.value <= 60){
                 segundo = addzero(pegaseg.value, 2)
             }
@@ -37,13 +35,9 @@ btniniciar.addEventListener('click',function(){
 
             contando()
 
-            console.log("1 " + acao)
-
-
             dispmin.innerHTML = addzero(minuto, 2)
             dispseg.innerHTML = addzero(segundo, 2)    
         }
-
     }
 })
 
@@ -78,11 +72,9 @@ function contando(){
 
 function parado(){
     acao = "parado"
-    console.log("parado")
     if(acao == "parado"){
         minuto = 0
         segundo = 0
-        console.log(minuto, segundo)
     }
 }
 
