@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="digitar">
+        <a href="https://posseidonportfolio.netlify.app/"><img src="https://i.ibb.co/xGb5VmQ/Posseidon.png" alt="Posseidon"/></a>
+        <div class="dall">
+            <label for="dmin">Digite os minutos</label>
+            <input type="number" name="dmin" id="dmin" min="0" max="60">
+            
+            <label for="dseg">Digite os segundos</label>
+            <input type="number" name="dseg" id="dseg" min="0" max="60">
+
+            <div><button id="iniciar">Iniciar</button></div>
+            <div><button id="pausar">Pausar</button></div>
+            <div><button id="parar">Parar</button></div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="tempo">
+        <div class="tall">
+            <p><span id="tmin">00</span><span id="tpoint">:</span><span id="tseg">00</span></p>
+        </div>
+    </div>
+    <audio id="sound" src="alarm.mp3" style="display: none;"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

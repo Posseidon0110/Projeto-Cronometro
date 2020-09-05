@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;}
+
+html, body{
+    height: 100%;
+    background-color: rgb(235,235,235);
+}
+
+.digitar{
+    width: calc(50% - 1px);
+    height: 100%;
+    float: left;
+}
+
+img{
+    width: 48px;
+    border-radius: 50%;
+}
+
+a{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+label, input{
+    display: block;
+    text-align: center;
+}
+
+.dall{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid rgb(125,125,125);
+    outline: 0;
+    padding: 0 20px;
+    line-height: 40px;
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+label{
+    font-size: 20px;
+    color: rgb(25,25,25);
+}
+
+button#iniciar{
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+    background-color: rgb(47, 209, 47);
+    /* background: linear-gradient(to right, rgb(47, 209, 88), rgb(27, 226, 143) 60%); */
+    color: white;
+    padding: 10px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow:0 3px 0 #12a85d;
+    margin-bottom: 15px;
+}
+
+button#iniciar:active{
+    position:relative;
+    top:3px;
+    box-shadow: none;
+}
+
+button#pausar{
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+    background-color: rgb(219, 200, 28);
+    /* background: linear-gradient(to right, rgb(216, 213, 13), rgb(211, 151, 22))  ; */
+    color: white;
+    padding: 10px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow:0 3px 0 #bba90a;
+    margin-bottom: 15px;
+    display: none;
+}
+
+button#pausar:active{
+    position:relative;
+    top:3px;
+    box-shadow: none;
+}
+
+button#parar{
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+    background-color: rgb(255, 57, 57);
+    /* background: linear-gradient(to right, rgb(216, 213, 13), rgb(211, 151, 22))  ; */
+    color: white;
+    padding: 10px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow:0 3px 0 rgb(214, 35, 35);
+    margin-bottom: 15px;
+    display: none;
+}
+
+button#parar:active{
+    position:relative;
+    top:3px;
+    box-shadow: none;
+}
+
+.line{
+    background-color: rgb(200,200,200);
+    height: 80%;
+    width: 2px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+    border-radius: 10px;
+}
+
+.tempo{
+    width: calc(50% - 1px);
+    height: 100%;
+    float: left;
+}
+
+.tall{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 100px;
+    color: rgb(55,55,55);
+    user-select: none;
+}
+
+#tpoint{
+    position: relative;
+    top: -10px;
+    padding: 0 5px;
+}
