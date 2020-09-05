@@ -9,10 +9,13 @@ html, body{
     background-color: rgb(235,235,235);
 }
 
+body{
+    display: flex;
+}
+
 .digitar{
     width: calc(50% - 1px);
     height: 100%;
-    float: left;
 }
 
 img{
@@ -129,14 +132,12 @@ button#parar:active{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    float: left;
     border-radius: 10px;
 }
 
 .tempo{
     width: calc(50% - 1px);
     height: 100%;
-    float: left;
 }
 
 .tall{
@@ -155,4 +156,33 @@ button#parar:active{
     position: relative;
     top: -10px;
     padding: 0 5px;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        flex-direction: column;
+    }
+    .digitar{
+        width: 100%;
+    }
+
+    .dall{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .line{
+        width: 80%;
+        height: 2px;
+        position: relative;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    .tempo{
+        width: 100%;
+    }
+    .tall{
+        width: 100%;
+    }
 }
