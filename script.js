@@ -1,4 +1,6 @@
 let btniniciar = document.querySelector("#iniciar")
+let btnpausar = document.querySelector("#pausar")
+let btnparar = document.querySelector("#parar")
 let dispseg = document.querySelector("#tseg")
 let dispmin = document.querySelector("#tmin")
 
@@ -32,18 +34,22 @@ btniniciar.addEventListener('click',function(){
             }
             audio.pause()
             audio.currentTime = 0;
-            iniciar()
+
+            contando()
+
+            console.log("1 " + acao)
+
+
             dispmin.innerHTML = addzero(minuto, 2)
             dispseg.innerHTML = addzero(segundo, 2)    
         }
-        if(pegaseg.value >= 1){
 
-        }
     }
-    
 })
 
-function iniciar(){
+btnparar.addEventListener('click',parado())
+
+function contando(){
     acao = "contando"
     interval = setInterval(function(){
         if(acao == "contando"){
@@ -53,21 +59,33 @@ function iniciar(){
             }
             else{
                 if(minuto > 0) {
-                    segundo = "60"
+                    segundo = "59"
                     dispseg.innerHTML = addzero(segundo, 2)
                     minuto--
                     dispmin.innerHTML = addzero(minuto, 2)
                 }
                 else{
-                    acao = "parado"
-                    console.log("Fim")
+                    parado()
                     audio.play()
                     clearInterval(interval)
                 }
             }
         }
     },1000);
+
+    
 }
+
+function parado(){
+    acao = "parado"
+    console.log("parado")
+    if(acao == "parado"){
+        minuto = 0
+        segundo = 0
+        console.log(minuto, segundo)
+    }
+}
+
 
 function addzero(n, width, z) {
     z = z || '0';
